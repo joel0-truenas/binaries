@@ -6,6 +6,7 @@ export DH_VERBOSE = 1
 
 override_dh_install:
 	dh_install
-	cp -R files/* debian/truenas-binaries/
+	cp -R files/common/* debian/truenas-binaries/
+	cp -R files/${DEB_TARGET_ARCH}/* debian/truenas-binaries/
 
 override_dh_usrlocal:
